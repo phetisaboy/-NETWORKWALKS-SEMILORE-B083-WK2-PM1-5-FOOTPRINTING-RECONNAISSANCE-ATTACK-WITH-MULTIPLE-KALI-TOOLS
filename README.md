@@ -38,14 +38,13 @@ Screenshots: `1-whois.png`, `2-whatweb.png`, `3-nslookup.png`, `4-curl.png`, `5-
 | WAF / CDN | ModSecurity (SpiderLabs) | Fastly CDN |
 | Hosting | WordPress site | GitHub Pages |
 
-## Part 2: Network Scanning (Zenmap / Nmap, own machine)
-- **Target:** 127.0.0.1 (localhost, my own computer)
+## Part 2: Network Scanning (Zenmap / Nmap)
+- **Target:** 127.0.0.1, the IP address provided in class (localhost, so the scan ran against my own computer)
+- **Command:** `nmap 127.0.0.1` (run in Zenmap)
 - **Open ports:** 135/tcp (msrpc) and 445/tcp (microsoft-ds). 98 other scanned ports were closed.
-- **Meaning:** Windows RPC and SMB file sharing are running. Both are normal on Windows but should be firewalled from untrusted networks, since SMB has had serious vulnerabilities such as the one used by WannaCry.
-- [PASTE optional: scan of my own home network/hotspot, plus topology screenshot]
-
+- **Meaning:** Windows RPC and SMB file sharing are running on the scanned machine. Both are normal on Windows but should be firewalled from untrusted networks, since SMB has had serious vulnerabilities such as the one used by WannaCry.
+  
 Screenshots: `7-Nmap-scanning.png`, `8-Nmap-topology.png`
-
 ## Recommendations
 - Limit the technology and version details exposed in HTTP headers.
 - Keep the web server, WordPress, and plugins updated, and hide version numbers.
